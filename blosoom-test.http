@@ -1,0 +1,14 @@
+#### GET Pokemon by name
+GET http://localhost:3000/api/pokemon/v1?metadata={"name":"charizard"}&config={"baseUrl":"https://pokeapi.co/api/v2"}
+Content-Type: application/json
+Accept: application/json
+
+### GET Digimon by ID
+GET http://localhost:3000/api/digimon/v1?metadata={"id":2}&config={"baseUrl":"https://digi-api.com/api/v1"}
+Content-Type: application/json
+Accept: application/json
+
+### Test error unsuported franchise
+GET http://localhost:3000/api/universal/v1?metadata={"name":"pikachu"}&config={"baseUrl":"https://pokeapi.co/api/v2"}
+Content-Type: application/json
+Accept: application/json
