@@ -41,8 +41,8 @@ tests/
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/tu-usuario/franchise-api.git
-cd franchise-api
+git clone https://github.com/germanandu/character-api.git
+cd character-api
 npm install
 ```
 
@@ -67,7 +67,6 @@ Example request for  **Digimon** :
 
 ```
 GET http://localhost:3000/api/digimon/v1?metadata={"id":1}&config={"baseUrl":"https://digi-api.com/api/v1"}
-
 ```
 
 ## 📦 Example Responses
@@ -81,7 +80,6 @@ Pokémon (Pikachu)
   "powers": ["static", "lightning-rod"],
   "evolutions": []
 }
-
 ```
 
 Digimon (Agumon)
@@ -104,9 +102,8 @@ Digimon (Agumon)
     "Andromon",
     "Angewomon",
     "Asuramon",
-]
+  ]
 }
-
 ```
 
 ## 🐳 Docker
