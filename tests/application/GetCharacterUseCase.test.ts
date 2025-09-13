@@ -1,9 +1,9 @@
 import { GetCharacterUseCase } from "../../src/application/GetCharacterUseCase";
 import { CharacterRepository } from "../../src/domain/CharacterRepository";
-import { Character } from "../../src/domain/Character";
+import { Character, Metadata, Config } from "../../src/domain/Character";
 
 class MockRepository implements CharacterRepository {
-  async fetch(metadata: any, config: any): Promise<Character> {
+  async fetch(metadata: Metadata, config: Config): Promise<Character> {
     return {
       name: "pikachu",
       weight: 60,
@@ -18,7 +18,7 @@ describe("GetCharacterUseCase", () => {
     const repo = new MockRepository();
     const useCase = new GetCharacterUseCase(repo);
 
-    const result = await useCase.execute({ name: "pikachu" }, {});
+    const result = await useCase.execute({ name: "pikachu" }, {baseUrl: "https://mock.api"});
 
     expect(result.name).toBe("pikachu");
     expect(result.powers).toContain("static");

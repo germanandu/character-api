@@ -30,9 +30,9 @@ export class CharacterController {
             res.json(character);
         } catch (error: any) {
             logRepo.add({
-                franchise: req.params.franchise,
-                version: req.params.version,
-                metadata: req.query.metadata,
+                franchise: franchise,
+                version: version,
+                metadata: JSON.parse(req.query.metadata as string),
                 timestamp: new Date(),
                 status: "fail",
                 error: error.message
