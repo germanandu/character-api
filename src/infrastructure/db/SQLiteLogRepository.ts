@@ -38,7 +38,7 @@ export class SQLiteLogRepository implements LogRepository {
   }
 
   async getAll(): Promise<LogEntry[]> {
-    const rows = await this.db.all<any[]>(`SELECT * FROM logs`);
+    const rows = await this.db.all<LogEntry[]>(`SELECT * FROM logs`);
     return rows.map((row) => ({
       franchise: row.franchise,
       version: row.version,

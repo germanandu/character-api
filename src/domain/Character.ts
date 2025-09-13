@@ -4,3 +4,10 @@ export interface Character {
   powers: string[];
   evolutions: string[];
 }
+export interface Metadata {
+    id?: number;
+    name?: string;
+}
+export interface Config {
+    baseUrl: string;
+}
